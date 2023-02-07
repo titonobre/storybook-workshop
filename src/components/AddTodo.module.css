@@ -1,0 +1,9 @@
+.addTodo {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.addTodoInput {
+    flex: 1;
+}
