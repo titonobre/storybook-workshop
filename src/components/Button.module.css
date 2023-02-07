@@ -1,0 +1,13 @@
+.button {
+  border: 0px;
+  padding: 0.8em;
+}
+
+.themePrimary {
+  background-color: blue;
+  color: white;
+}
+
+.themePrimary:hover {
+  background-color: darkblue;
+}
