@@ -1,6 +1,8 @@
 import { useCallback, useState } from "react";
 
 import styles from "./App.module.css";
+import { TodoItemsList } from "./components/TodoItemsList";
+import { AddTodo } from "./components/AddTodo";
 
 function App() {
   const [items, setItems] = useState<string[]>([]);
@@ -21,17 +23,9 @@ function App() {
 
   return (
     <div className={styles.app}>
-      <ul>
-        {items.map((item) => {
-          return (
-            <li key={item}>
-              {item} <button onClick={() => onRemove(item)}>X</button>
-            </li>
-          );
-        })}
-      </ul>
+      <TodoItemsList items={items} onRemove={onRemove} />
 
-      <button onClick={() => onAdd(`todo ${items.length}`)}>+</button>
+      <AddTodo onAddTodo={onAdd} />
     </div>
   );
 }
