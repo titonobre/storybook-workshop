@@ -1,0 +1,10 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    min-height: 90vh;
+}
+
+.app > *:first-child {
+    flex: 1;
+}
