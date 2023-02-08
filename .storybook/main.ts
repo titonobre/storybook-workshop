@@ -5,6 +5,7 @@ const config: StorybookConfig = {
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
+    "@storybook/addon-interactions",
   ],
   framework: {
     name: "@storybook/react-vite",
@@ -12,6 +13,7 @@ const config: StorybookConfig = {
   },
   features: {
     storyStoreV7: true,
+    interactionsDebugger: true,
   },
   docs: {
     autodocs: true,

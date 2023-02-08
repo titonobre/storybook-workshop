@@ -20,7 +20,12 @@ export const AddTodo = ({ onAddTodo }: AddTodoProps) => {
 
   return (
     <div className={styles.addTodo}>
-      <input ref={inputRef}  className={styles.addTodoInput} type={"text"} />
+      <input
+        ref={inputRef}
+        className={styles.addTodoInput}
+        type={"text"}
+        role={"textbox"}
+      />
       <Button theme="primary" label="+" onClick={onClickAddButton} />
     </div>
   );
