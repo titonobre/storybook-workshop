@@ -12,13 +12,6 @@ export const Default: StoryObj<typeof Button> = {
   args: {
     label: "Button",
   },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-
-    const submitButton = canvas.getByRole("button");
-
-    await userEvent.click(submitButton);
-  },
 };
 
 export const Primary: StoryObj<typeof Button> = {
@@ -32,5 +25,18 @@ export const Secondary: StoryObj<typeof Button> = {
   args: {
     theme: "secondary",
     label: "Button",
+  },
+};
+
+export const WithInteraction: StoryObj<typeof Button> = {
+  args: {
+    label: "Button",
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const submitButton = canvas.getByRole("button");
+
+    await userEvent.click(submitButton);
   },
 };
