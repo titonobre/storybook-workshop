@@ -7,11 +7,13 @@ export default {
   component: AddTodo,
 } as Meta<typeof AddTodo>;
 
-export const Default: StoryObj<typeof AddTodo> = {
+export const Default: StoryObj<typeof AddTodo> = {};
+
+export const WithInteraction: StoryObj<typeof AddTodo> = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
 
-    const input = canvas.getByRole('textbox')
+    const input = canvas.getByRole("textbox");
 
     await userEvent.type(input, "finish storybook presentation", {
       delay: 100,
