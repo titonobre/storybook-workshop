@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev --host localhost --port 6006 --no-open",
     "build-storybook": "storybook build",
-    "watch-storybook": "nodemon --watch .storybook --ext js,ts --exec 'npm run storybook'"
+    "watch-storybook": "nodemon --watch .storybook --ext js,ts --exec 'npm run storybook'",
+    "test-storybook": "test-storybook"
   },
   "dependencies": {
     "classnames": "^2.3.2",
