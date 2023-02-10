@@ -15,6 +15,8 @@ export const AddTodo = ({ onAddTodo }: AddTodoProps) => {
     if (inputRef.current) {
       const value = inputRef.current.value;
       value && onAddTodo?.(value);
+
+      inputRef.current.value = "";
     }
   };
 
