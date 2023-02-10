@@ -15,17 +15,20 @@ export default {
 export const Default: StoryObj<typeof AddTodo> = {};
 
 export const WithInteraction: StoryObj<typeof AddTodo> = {
-  play: async ({ canvasElement }) => {
+  play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
-
-    const input = canvas.getByRole("textbox");
-
-    await userEvent.type(input, "finish storybook presentation", {
-      delay: 100,
-    });
-
+    const input = canvas.getByRole<HTMLInputElement>("textbox");
     const submitButton = canvas.getByRole("button");
 
-    await userEvent.click(submitButton);
+    await step("Write TODO text", async () => {
+      await userEvent.type(input, "finish storybook presentation", {
+        delay: 100,
+      });
+    });
+
+    await step("Click Add Button", async () => {
+      await userEvent.click(submitButton);
+    });
+
   },
 };

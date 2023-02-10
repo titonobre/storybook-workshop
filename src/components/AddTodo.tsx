@@ -12,13 +12,20 @@ export const AddTodo = ({ onAddTodo }: AddTodoProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const onClickAddButton = () => {
-    const value = inputRef.current?.value;
-    value && onAddTodo?.(value);
+    if (inputRef.current) {
+      const value = inputRef.current.value;
+      value && onAddTodo?.(value);
+    }
   };
 
   return (
     <div className={styles.addTodo}>
-      <input ref={inputRef}  className={styles.addTodoInput} type={"text"} role={"textbox"} />
+      <input
+        ref={inputRef}
+        className={styles.addTodoInput}
+        type={"text"}
+        role={"textbox"}
+      />
       <Button theme="primary" label="+" onClick={onClickAddButton} />
     </div>
   );
