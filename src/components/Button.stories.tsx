@@ -28,6 +28,19 @@ export const Secondary: StoryObj<typeof Button> = {
   },
 };
 
+export const CustomLabels: StoryObj<typeof Button> = {
+  args: {
+    theme: "secondary",
+    label: "+",
+  },
+  argTypes: {
+    label: {
+      options: ['+', '-'],
+      control: { type: "radio"}
+    }
+  }
+};
+
 export const WithInteraction: StoryObj<typeof Button> = {
   args: {
     label: "Button",
