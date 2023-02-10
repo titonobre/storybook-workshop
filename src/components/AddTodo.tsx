@@ -27,6 +27,7 @@ export const AddTodo = ({ onAddTodo }: AddTodoProps) => {
         className={styles.addTodoInput}
         type={"text"}
         role={"textbox"}
+        aria-label="todo text"
       />
       <Button theme="primary" label="+" onClick={onClickAddButton} />
     </div>
