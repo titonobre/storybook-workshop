@@ -11,7 +11,8 @@
     "build-storybook": "storybook build",
     "watch-storybook": "nodemon --watch .storybook --ext js,ts --exec 'npm run storybook'",
     "test-storybook": "test-storybook",
-    "report-coverage": "npx nyc report --reporter=lcov -t coverage/storybook --report-dir coverage/storybook"
+    "report-coverage": "npx nyc report --reporter=lcov -t coverage/storybook --report-dir coverage/storybook",
+    "chromatic": "npx chromatic"
   },
   "dependencies": {
     "classnames": "^2.3.2",
