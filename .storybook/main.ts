@@ -14,6 +14,7 @@ const config: StorybookConfig = {
   },
   features: {
     storyStoreV7: true,
+    interactionsDebugger: true,
   },
 };
 
