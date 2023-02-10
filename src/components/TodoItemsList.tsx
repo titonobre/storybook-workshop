@@ -9,7 +9,7 @@ export type TodoItemsListProps = {
 
 export const TodoItemsList = ({ items, onRemove }: TodoItemsListProps) => {
   return (
-    <div className={styles.todoItemsList}>
+    <div className={styles.todoItemsList} data-testid="todos-list">
       {items.map((item) => (
         <TodoItem key={item} text={item} onRemove={() => onRemove?.(item)} />
       ))}

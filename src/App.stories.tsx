@@ -40,5 +40,16 @@ export const WithInteraction: StoryObj<typeof App> = {
       
       await expect(todoItem).toBeInTheDocument();
     });
+    
+    await step("Click Remove Button", async () => {
+      const removeButton = canvas.getByRole("button", { name: "X" });
+      await userEvent.click(removeButton);
+    });
+    
+    await step("Check TODO was removed", async () => {
+      const todoItems = canvas.getByTestId('todos-list');
+      
+      await expect(todoItems).toBeEmptyDOMElement();
+    });
   },
 };
