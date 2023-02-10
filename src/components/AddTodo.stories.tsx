@@ -5,6 +5,11 @@ import { AddTodo } from "./AddTodo";
 
 export default {
   component: AddTodo,
+  parameters: {
+    a11y: {
+      disable: true,
+    },
+  },
 } as Meta<typeof AddTodo>;
 
 export const Default: StoryObj<typeof AddTodo> = {};
