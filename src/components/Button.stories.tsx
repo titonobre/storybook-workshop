@@ -4,6 +4,12 @@ import { Button } from "./Button";
 
 export default {
   component: Button,
+  argTypes: {
+    label: {
+      options: ["+", "-"],
+      control: { type: "radio" },
+    },
+  },
 } as Meta<typeof Button>;
 
 export const Default: StoryObj<typeof Button> = {
