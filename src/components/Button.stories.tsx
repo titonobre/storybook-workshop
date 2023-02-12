@@ -4,6 +4,7 @@ import { Button } from "./Button";
 
 export default {
   component: Button,
+  tags: ["autodocs"],
 } as Meta<typeof Button>;
 
 export const Default: StoryObj<typeof Button> = {
