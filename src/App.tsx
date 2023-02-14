@@ -2,6 +2,9 @@ import { useState } from "react";
 
 import styles from "./App.module.css";
 
+// import { AddTodo } from "./components/AddTodo";
+// import { TodoItemsList } from "./components/TodoItemsList";
+
 export default function App() {
   const [items, setItems] = useState<string[]>([]);
 
@@ -24,8 +27,10 @@ export default function App() {
           );
         })}
       </ul>
+      {/* <TodoItemsList items={items} onRemove={onRemove} /> */}
 
       <button onClick={() => onAdd(`todo ${items.length}`)}>+</button>
+      {/* <AddTodo onAddTodo={onAdd} /> */}
     </div>
   );
 }
